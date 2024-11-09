@@ -14,7 +14,7 @@ sys.path.insert(0, os.path.abspath('C:/Users/eliza/OneDrive/Documents/cambridge_
 project = 'pygbm'
 copyright = '2024, Liz Tan'
 author = 'Liz Tan'
-release = '0.1.0.'
+release = '0.1.0'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
