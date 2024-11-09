@@ -6,8 +6,12 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-#import os 
-#import sys
+import os
+import sys
+
+# Insert the absolute path to 'pygbm' in sys.path
+sys.path.insert(0, os.path.abspath("C:/Users/eliza/OneDrive/Documents/cambridge_DIS/c1/example_class2/brownian_motion/pygbm"))
+
 import sphinx_rtd_theme
 
 #sys.path.insert(0, os.path.abspath('C:/Users/eliza/OneDrive/Documents/cambridge_DIS/c1/example_class2/brownian_motion/pygbm'))
@@ -26,6 +30,7 @@ extensions = [
 	'sphinx_rtd_theme',
     'sphinx_gallery.load_style',  # load CSS for gallery (needs SG >= 0.6)
     'sphinx.ext.githubpages',
+    'sphinx.ext.autodoc'
 ]
 
 templates_path = ['_templates']
