@@ -13,9 +13,6 @@ The `Stochastic_Processes` class is a base class that provides methods for simul
    :undoc-members:
    :show-inheritance:
 
-   - **__init__**: Initializes the stochastic process with a starting point.
-   - **brownian_motion**: Calculates the Brownian motion random walk.
-   - **plot**: Plots displacement over time and saves the plot.
 
 GBMSimulator Class
 ------------------
@@ -26,6 +23,3 @@ The `GBMSimulator` class inherits from `Stochastic_Processes` and simulates 1D g
    :members:
    :undoc-members:
    :show-inheritance:
-
-   - **__init__**: Initializes the GBM simulator with parameters for mean and standard deviation.
-   - **simulate_path**: Simulates the GBM path and plots it.

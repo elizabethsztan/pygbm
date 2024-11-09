@@ -99,21 +99,29 @@
 <dt class="sig sig-object py" id="gbm_simulator.Stochastic_Processes">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">gbm_simulator.</span></span><span class="sig-name descname"><span class="pre">Stochastic_Processes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">y0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gbm_simulator.Stochastic_Processes" title="Link to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<ul class="simple">
-<li><p><strong>__init__</strong>: Initializes the stochastic process with a starting point.</p></li>
-<li><p><strong>brownian_motion</strong>: Calculates the Brownian motion random walk.</p></li>
-<li><p><strong>plot</strong>: Plots displacement over time and saves the plot.</p></li>
-</ul>
+<p>Creates an object that undergoes a 1D stochastic process (Brownian motion).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>y0</strong> (<em>float</em>) – starting point of the object at t=0.</p>
+</dd>
+</dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="gbm_simulator.Stochastic_Processes.brownian_motion">
 <span class="sig-name descname"><span class="pre">brownian_motion</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">T</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">N</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gbm_simulator.Stochastic_Processes.brownian_motion" title="Link to this definition"></a></dt>
 <dd><p>Calculates the Brownian motion random walk over.</p>
-<dl class="simple">
-<dt>Args:</dt><dd><p>T (float): Time scale of the Brownian motion.
-N (int): Number of time steps.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>T</strong> (<em>float</em>) – Time scale of the Brownian motion.</p></li>
+<li><p><strong>N</strong> (<em>int</em>) – Number of time steps.</p></li>
+</ul>
 </dd>
-<dt>Returns:</dt><dd><p>t (np.array): Timesteps in array format.
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Timesteps in array format.
 B_t (np.array): Brownian motion displacement in arrary format for corresponding timesteps.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>t (np.array)</p>
 </dd>
 </dl>
 </dd></dl>
@@ -123,9 +131,12 @@ B_t (np.array): Brownian motion displacement in arrary format for corresponding 
 <span class="sig-name descname"><span class="pre">plot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Y_t</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gbm_simulator.Stochastic_Processes.plot" title="Link to this definition"></a></dt>
 <dd><p>Plots a graph of the Brownian motion displacement (y-axis) with the corresponding time-steps.
 Saves plot in folder.</p>
-<dl class="simple">
-<dt>Args:</dt><dd><p>t (np.array): Timesteps in array format.
-Y_t (np.array): Brownian motion displacement in arrary format for corresponding timesteps.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>t</strong> (<em>np.array</em>) – Timesteps in array format.</p></li>
+<li><p><strong>Y_t</strong> (<em>np.array</em>) – Brownian motion displacement in arrary format for corresponding timesteps.</p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>
@@ -140,20 +151,33 @@ Y_t (np.array): Brownian motion displacement in arrary format for corresponding 
 <dt class="sig sig-object py" id="gbm_simulator.GBMSimulator">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">gbm_simulator.</span></span><span class="sig-name descname"><span class="pre">GBMSimulator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">y0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigma</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gbm_simulator.GBMSimulator" title="Link to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="#gbm_simulator.Stochastic_Processes" title="gbm_simulator.Stochastic_Processes"><code class="xref py py-class docutils literal notranslate"><span class="pre">Stochastic_Processes</span></code></a></p>
-<ul class="simple">
-<li><p><strong>__init__</strong>: Initializes the GBM simulator with parameters for mean and standard deviation.</p></li>
-<li><p><strong>simulate_path</strong>: Simulates the GBM path and plots it.</p></li>
+<p>Produces an object undergoing geometric Brownian motion.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>y0</strong> (<em>float</em>) – Starting point of the object at t=0.</p></li>
+<li><p><strong>mu</strong> (<em>float</em>) – Mean of GBM.</p></li>
+<li><p><strong>sigma</strong> (<em>float</em>) – Standard deviation of GBM.</p></li>
 </ul>
+</dd>
+</dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="gbm_simulator.GBMSimulator.simulate_path">
 <span class="sig-name descname"><span class="pre">simulate_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">T</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">N</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gbm_simulator.GBMSimulator.simulate_path" title="Link to this definition"></a></dt>
 <dd><p>Simulates 1D GBM and plots a graph. Saves plot in folder.</p>
-<dl class="simple">
-<dt>Args:</dt><dd><p>T (float): Time scale of the Brownian motion.
-N (int): Number of time steps</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>T</strong> (<em>float</em>) – Time scale of the Brownian motion.</p></li>
+<li><p><strong>N</strong> (<em>int</em>) – Number of time steps</p></li>
+</ul>
 </dd>
-<dt>Returns:</dt><dd><p>t (np.array): Timesteps in array format.
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Timesteps in array format.
 Y_t (np.array): Brownian motion displacement in arrary format for corresponding timesteps.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>t (np.array)</p>
 </dd>
 </dl>
 </dd></dl>

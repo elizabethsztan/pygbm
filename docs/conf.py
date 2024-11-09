@@ -30,7 +30,9 @@ extensions = [
 	'sphinx_rtd_theme',
     'sphinx_gallery.load_style',  # load CSS for gallery (needs SG >= 0.6)
     'sphinx.ext.githubpages',
-    'sphinx.ext.autodoc'
+    'sphinx.ext.autodoc', 
+    'sphinx.ext.coverage',
+    'sphinx.ext.napoleon'
 ]
 
 templates_path = ['_templates']
