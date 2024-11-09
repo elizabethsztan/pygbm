@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GBM Simulator Module &mdash; pygbm 0.1.0 documentation</title>
+  <title>Stochastic_Processes Class &mdash; pygbm 0.1.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="_static/sg_gallery.css?v=d2d258e8" />
@@ -45,20 +45,17 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">GBM Simulator Module</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#stochastic-processes-class">Stochastic_Processes Class</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#gbm_simulator.Stochastic_Processes"><code class="docutils literal notranslate"><span class="pre">Stochastic_Processes</span></code></a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#gbm_simulator.Stochastic_Processes.brownian_motion"><code class="docutils literal notranslate"><span class="pre">Stochastic_Processes.brownian_motion()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#gbm_simulator.Stochastic_Processes.plot"><code class="docutils literal notranslate"><span class="pre">Stochastic_Processes.plot()</span></code></a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Stochastic_Processes Class</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#gbm_simulator.Stochastic_Processes"><code class="docutils literal notranslate"><span class="pre">Stochastic_Processes</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#gbm_simulator.Stochastic_Processes.brownian_motion"><code class="docutils literal notranslate"><span class="pre">Stochastic_Processes.brownian_motion()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gbm_simulator.Stochastic_Processes.plot"><code class="docutils literal notranslate"><span class="pre">Stochastic_Processes.plot()</span></code></a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#gbmsimulator-class">GBMSimulator Class</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#gbm_simulator.GBMSimulator"><code class="docutils literal notranslate"><span class="pre">GBMSimulator</span></code></a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#gbm_simulator.GBMSimulator.simulate_path"><code class="docutils literal notranslate"><span class="pre">GBMSimulator.simulate_path()</span></code></a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="#gbmsimulator-class">GBMSimulator Class</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#gbm_simulator.GBMSimulator"><code class="docutils literal notranslate"><span class="pre">GBMSimulator</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#gbm_simulator.GBMSimulator.simulate_path"><code class="docutils literal notranslate"><span class="pre">GBMSimulator.simulate_path()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -79,7 +76,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">GBM Simulator Module</li>
+      <li class="breadcrumb-item active">Stochastic_Processes Class</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/gbm_simulator.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -89,11 +86,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="gbm-simulator-module">
-<h1>GBM Simulator Module<a class="headerlink" href="#gbm-simulator-module" title="Link to this heading"></a></h1>
-<p>This module simulates stochastic processes, including Brownian motion and geometric Brownian motion (GBM).</p>
-<section id="stochastic-processes-class">
-<h2>Stochastic_Processes Class<a class="headerlink" href="#stochastic-processes-class" title="Link to this heading"></a></h2>
+  <section id="stochastic-processes-class">
+<h1>Stochastic_Processes Class<a class="headerlink" href="#stochastic-processes-class" title="Link to this heading"></a></h1>
 <p>The <cite>Stochastic_Processes</cite> class is a base class that provides methods for simulating 1D Brownian motion and plotting the displacement over time.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="gbm_simulator.Stochastic_Processes">
@@ -145,7 +139,7 @@ Saves plot in folder.</p>
 
 </section>
 <section id="gbmsimulator-class">
-<h2>GBMSimulator Class<a class="headerlink" href="#gbmsimulator-class" title="Link to this heading"></a></h2>
+<h1>GBMSimulator Class<a class="headerlink" href="#gbmsimulator-class" title="Link to this heading"></a></h1>
 <p>The <cite>GBMSimulator</cite> class inherits from <cite>Stochastic_Processes</cite> and simulates 1D geometric Brownian motion (GBM).</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="gbm_simulator.GBMSimulator">
@@ -184,7 +178,6 @@ Y_t (np.array): Brownian motion displacement in arrary format for corresponding 
 
 </dd></dl>
 
-</section>
 </section>
 
 

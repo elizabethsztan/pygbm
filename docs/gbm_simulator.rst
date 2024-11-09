@@ -1,8 +1,3 @@
-GBM Simulator Module
-====================
-
-This module simulates stochastic processes, including Brownian motion and geometric Brownian motion (GBM).
-
 Stochastic_Processes Class
 --------------------------
 
