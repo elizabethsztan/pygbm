@@ -1,3 +1,6 @@
+GBM Simulator Module
+====================
+
 Stochastic_Processes Class
 --------------------------
 
@@ -7,7 +10,7 @@ The `Stochastic_Processes` class is a base class that provides methods for simul
    :members:
    :undoc-members:
    :show-inheritance:
-
+   :no-index:
 
 GBMSimulator Class
 ------------------
@@ -18,3 +21,4 @@ The `GBMSimulator` class inherits from `Stochastic_Processes` and simulates 1D g
    :members:
    :undoc-members:
    :show-inheritance:
+   :no-index:
