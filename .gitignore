@@ -1,0 +1,21 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.egg-info
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+*.whl
+
+# Logs and temporary files
+*.log
+*.tmp
+.DS_Store
+
+# Images and generated files
+fig.png
+
+# Docker-related
+.dockerignore
