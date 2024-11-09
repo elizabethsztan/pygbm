@@ -46,8 +46,21 @@
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">GBM Simulator Module</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#stochastic-processes-class">Stochastic_Processes Class</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#gbmsimulator-class">GBMSimulator Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#stochastic-processes-class">Stochastic_Processes Class</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#gbm_simulator.Stochastic_Processes"><code class="docutils literal notranslate"><span class="pre">Stochastic_Processes</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#gbm_simulator.Stochastic_Processes.brownian_motion"><code class="docutils literal notranslate"><span class="pre">Stochastic_Processes.brownian_motion()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gbm_simulator.Stochastic_Processes.plot"><code class="docutils literal notranslate"><span class="pre">Stochastic_Processes.plot()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#gbmsimulator-class">GBMSimulator Class</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#gbm_simulator.GBMSimulator"><code class="docutils literal notranslate"><span class="pre">GBMSimulator</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#gbm_simulator.GBMSimulator.simulate_path"><code class="docutils literal notranslate"><span class="pre">GBMSimulator.simulate_path()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -82,10 +95,71 @@
 <section id="stochastic-processes-class">
 <h2>Stochastic_Processes Class<a class="headerlink" href="#stochastic-processes-class" title="Link to this heading"></a></h2>
 <p>The <cite>Stochastic_Processes</cite> class is a base class that provides methods for simulating 1D Brownian motion and plotting the displacement over time.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="gbm_simulator.Stochastic_Processes">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">gbm_simulator.</span></span><span class="sig-name descname"><span class="pre">Stochastic_Processes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">y0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gbm_simulator.Stochastic_Processes" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<ul class="simple">
+<li><p><strong>__init__</strong>: Initializes the stochastic process with a starting point.</p></li>
+<li><p><strong>brownian_motion</strong>: Calculates the Brownian motion random walk.</p></li>
+<li><p><strong>plot</strong>: Plots displacement over time and saves the plot.</p></li>
+</ul>
+<dl class="py method">
+<dt class="sig sig-object py" id="gbm_simulator.Stochastic_Processes.brownian_motion">
+<span class="sig-name descname"><span class="pre">brownian_motion</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">T</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">N</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gbm_simulator.Stochastic_Processes.brownian_motion" title="Link to this definition"></a></dt>
+<dd><p>Calculates the Brownian motion random walk over.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>T (float): Time scale of the Brownian motion.
+N (int): Number of time steps.</p>
+</dd>
+<dt>Returns:</dt><dd><p>t (np.array): Timesteps in array format.
+B_t (np.array): Brownian motion displacement in arrary format for corresponding timesteps.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gbm_simulator.Stochastic_Processes.plot">
+<span class="sig-name descname"><span class="pre">plot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Y_t</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gbm_simulator.Stochastic_Processes.plot" title="Link to this definition"></a></dt>
+<dd><p>Plots a graph of the Brownian motion displacement (y-axis) with the corresponding time-steps.
+Saves plot in folder.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>t (np.array): Timesteps in array format.
+Y_t (np.array): Brownian motion displacement in arrary format for corresponding timesteps.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
 </section>
 <section id="gbmsimulator-class">
 <h2>GBMSimulator Class<a class="headerlink" href="#gbmsimulator-class" title="Link to this heading"></a></h2>
 <p>The <cite>GBMSimulator</cite> class inherits from <cite>Stochastic_Processes</cite> and simulates 1D geometric Brownian motion (GBM).</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="gbm_simulator.GBMSimulator">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">gbm_simulator.</span></span><span class="sig-name descname"><span class="pre">GBMSimulator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">y0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigma</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gbm_simulator.GBMSimulator" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#gbm_simulator.Stochastic_Processes" title="gbm_simulator.Stochastic_Processes"><code class="xref py py-class docutils literal notranslate"><span class="pre">Stochastic_Processes</span></code></a></p>
+<ul class="simple">
+<li><p><strong>__init__</strong>: Initializes the GBM simulator with parameters for mean and standard deviation.</p></li>
+<li><p><strong>simulate_path</strong>: Simulates the GBM path and plots it.</p></li>
+</ul>
+<dl class="py method">
+<dt class="sig sig-object py" id="gbm_simulator.GBMSimulator.simulate_path">
+<span class="sig-name descname"><span class="pre">simulate_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">T</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">N</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gbm_simulator.GBMSimulator.simulate_path" title="Link to this definition"></a></dt>
+<dd><p>Simulates 1D GBM and plots a graph. Saves plot in folder.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>T (float): Time scale of the Brownian motion.
+N (int): Number of time steps</p>
+</dd>
+<dt>Returns:</dt><dd><p>t (np.array): Timesteps in array format.
+Y_t (np.array): Brownian motion displacement in arrary format for corresponding timesteps.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
 </section>
 </section>
 
