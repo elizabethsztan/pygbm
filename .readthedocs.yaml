@@ -1,0 +1,22 @@
+# .readthedocs.yaml
+
+version: 1
+
+# Build settings
+build:
+  os: ubuntu-22.04
+  tools:
+    python: "3.9"  # Use the Python version compatible with your project
+
+# Python dependencies
+python:
+  install:
+    - requirements: requirements.txt  # Install dependencies from requirements.txt
+
+sphinx:
+  configuration: docs/source/conf.py  # Path to your Sphinx conf.py file
+
+# Optional: Set the documentation theme
+mkdocs:
+  theme:
+    name: readthedocs  # Uses the Read the Docs theme
