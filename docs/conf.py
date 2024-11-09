@@ -21,9 +21,11 @@ release = '0.1.0'
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
 extensions = [
-    'sphinx.ext.autodoc',
-    'sphinx.ext.napoleon',            # For Google/NumPy-style docstrings
-    'sphinx_autodoc_typehints',       # For automatic type hints in docs
+	'nbsphinx',
+	'sphinx.ext.mathjax',
+	'sphinx_rtd_theme',
+    'sphinx_gallery.load_style',  # load CSS for gallery (needs SG >= 0.6)
+    'sphinx.ext.githubpages',
 ]
 
 templates_path = ['_templates']
